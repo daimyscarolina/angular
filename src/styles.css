@@ -1,10 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* para que las tarjetas queden responsive */
 .main-container{
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fill,300px);
 }
 
+/* para que el texto que se muestra no quede desigual en tamaño */
+/* (REVISAR!! como fijar una cantidad de caracteres) */
 .truncate {
   white-space: nowrap;
   overflow: hidden;
@@ -71,3 +75,9 @@
   text-shadow:  0px 0px 5px #fff, 0px 0px 5px #fff;
 }
 /* Fin de Estilos de Conoce Más */
+
+/* Estilo para el tamaño de las carpetas de marvel y dc*/
+.img-logo{
+  height: 200px;
+  width: 200px;
+}
