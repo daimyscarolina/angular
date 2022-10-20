@@ -71,6 +71,26 @@ export class HeroesService {
     return this.heroes[idx];
   }
 
+//  Buscar héroes
+  searchHeroesServ(text:string){
+
+    let heroesArr:TipoHeroe[] = [];
+
+    text = text.toLowerCase();
+
+    for(let unHeroe of this.heroes){
+
+      let name = unHeroe.nombre.toLowerCase();
+
+      if(name.indexOf(text) >= 0){
+        heroesArr.push(unHeroe)
+      }
+    }
+
+    return heroesArr;
+
+  }
+
 }
 
 // Esto se usa para definir el tipo de objeto y cuales son los parametros obligatorios y los opcionales //
