@@ -3,24 +3,9 @@
 
 <div class="container main-container" >
 
-  <div class="card-columns" *ngFor = "let i of heroes; let idx = index">
+  <div class="card-columns" *ngFor = "let foo of heroes; let idx = index">
 
-    <div class="card animated fadeIn fast" >
-      <img class="card-img-top" [src]="i.img" [alt]="i.nombre">
-      <div class="card-body">
-        <h5 class="card-title">{{i.nombre}}</h5>
-        <p class="card-text truncate">{{i.bio}}</p>
-        <p class="card-text"><small class="text-muted">{{i.aparicion}}</small></p>
-
-        <div class="d-grid gap-2">
-          <button (click)="verHeroe(idx)"
-                  class="btn rounded" type="button">
-            Conoce más...
-          </button>
-        </div>
-
-      </div>
-    </div>
+    <app-heroe-tarjeta (heroeSeleccionado)="verHeroe($event)" [i]="foo" [index]="idx"></app-heroe-tarjeta>
 
   </div>
 </div>

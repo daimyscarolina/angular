@@ -78,11 +78,14 @@ export class HeroesService {
 
     text = text.toLowerCase();
 
-    for(let unHeroe of this.heroes){
+    for(let i = 0; i<this.heroes.length; i++){
+
+      let unHeroe = this.heroes[i];
 
       let name = unHeroe.nombre.toLowerCase();
 
       if(name.indexOf(text) >= 0){
+        unHeroe.idx = i;
         heroesArr.push(unHeroe)
       }
     }
@@ -101,5 +104,6 @@ export interface TipoHeroe {
   img:string;
   aparicion:string;
   casa:string;
+  idx?:number;
 
 }
